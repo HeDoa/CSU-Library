@@ -149,7 +149,7 @@ if __name__ == "__main__":
 
     LOG_FORMAT = "%(asctime)s\t%(levelname)s\t%(message)s"
     logging.basicConfig(filename='library.log',
-                        level=logging.INFO, format=LOG_FORMAT, encoding='UTF-8')
+                        level=logging.INFO, format=LOG_FORMAT)
 
     helper = CSULibrary(args.userid, args.password)
     # 故意不做异常处理，这样 Github 便会发邮件提醒
