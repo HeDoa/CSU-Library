@@ -1,4 +1,4 @@
-name: CSU Library Reserve
+name: CSU-Library-Reserve
 
 on:
   workflow_dispatch:
