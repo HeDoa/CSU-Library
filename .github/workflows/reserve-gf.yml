@@ -1,0 +1,36 @@
+name: CSU-Library-Reserve-Gf
+
+on:
+  workflow_dispatch:
+
+jobs:
+  reserve:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Python
+      run: |
+        sudo apt update && \
+        sudo apt install python3
+      
+    - name: requirements
+      run: |
+        pip3 install -r requirements.txt
+        
+    - name: Reserve
+      run: |
+        user='${{ secrets.USER-gf }}'
+        pwd='${{ secrets.PWD-gf }}'
+        python3 helper.py --userid $user --password $pwd
+    - name: Commit
+      run: |
+        git config --global user.email brushy.05wearer@icloud.com
+        git config --global user.name EZ4Chen
+        git add .
+        git commit -m "Update library.log" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
