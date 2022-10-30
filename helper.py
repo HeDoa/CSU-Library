@@ -96,6 +96,7 @@ class CSULibrary(object):
             'execution': execution
         }
         response2 = self.client.post(url2, data=data2)
+        print(response2.content)
 
     def reserve(self):
         """
