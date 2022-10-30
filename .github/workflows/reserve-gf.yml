@@ -2,13 +2,6 @@ name: CSU-Library-Reserve-Gf
 
 on:
   workflow_dispatch:
- 
-  schedule:
-    - cron: '00 07 * * *'
-    - cron: '05 07 * * *'
-    - cron: '10 07 * * *'
-    - cron: '15 07 * * *'
-    - cron: '20 07 * * *'
   
 jobs:
   reserve:
