@@ -96,14 +96,13 @@ class CSULibrary(object):
             'execution': execution
         }
         response2 = self.client.post(url2, data=data2)
-        print(response2.content)
 
     def reserve(self):
         """
         预约指定位置,返回结果消息
         """
         self.login()
-
+        print(requests.utils.dict_from_cookiejar(self.client.cookies))
         access_token = requests.utils.dict_from_cookiejar(self.client.cookies)[
             'access_token']
 
