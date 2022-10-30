@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
  
   schedule:
-    - cron: '00 22 * * *'
- 
+    - cron: '06 05 * * *'
+  
 jobs:
   reserve:
     runs-on: ubuntu-latest
