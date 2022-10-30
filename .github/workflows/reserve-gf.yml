@@ -2,7 +2,10 @@ name: CSU-Library-Reserve-Gf
 
 on:
   workflow_dispatch:
-
+ 
+  schedule:
+    - cron: '00 22 * * *'
+ 
 jobs:
   reserve:
     runs-on: ubuntu-latest
@@ -24,3 +27,4 @@ jobs:
         user='${{ secrets.USER_GF }}'
         pwd='${{ secrets.PWD_GF }}'
         python3 helper.py --userid $user --password $pwd
+     
