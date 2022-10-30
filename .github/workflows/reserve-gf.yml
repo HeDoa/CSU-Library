@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
  
   schedule:
-    - cron: '00 06 * * *'
-    - cron: '05 06 * * *'
-    - cron: '10 06 * * *'
-    - cron: '15 06 * * *'
-    - cron: '20 05 * * *'
+    - cron: '00 07 * * *'
+    - cron: '05 07 * * *'
+    - cron: '10 07 * * *'
+    - cron: '15 07 * * *'
+    - cron: '20 07 * * *'
   
 jobs:
   reserve:
